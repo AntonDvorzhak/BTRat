@@ -1,8 +1,4 @@
-RTL.BLEScanner Sample[]()
-# RTL.BLEScanner Sample 
-
-
-This is a sample that shows the use of the [Bluetooth](http://docwiki.embarcadero.com/Libraries/en/System.Bluetooth) API to search for nearby Bluetooth devices and check whether they broadcast any services.
+BTRat
 ## Contents
 
 
@@ -90,6 +86,7 @@ On initialization, the `FormShow` method initializes a Boolean that is used as a
 * [System.Bluetooth.TBluetoothGattServiceList](http://docwiki.embarcadero.com/Libraries/en/System.Bluetooth.TBluetoothGattServiceList)
 
 * [Using Bluetooth Low Energy](http://docwiki.embarcadero.com/RADStudio/en/Using_Bluetooth_Low_Energy)
+
 
 
 
