@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<TgConfig Version="3" SubLevelDisabled="False">
-  <Option Name="namespaceFolder.BTrat" Type="System.String" Value="BTrat" Category="General" IsBrowsable="False" />
-</TgConfig>
