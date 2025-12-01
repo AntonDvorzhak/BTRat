@@ -1,0 +1,868 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  ActiveControl = TabItem1
+  Caption = 'Form6'
+  ClientHeight = 616
+  ClientWidth = 332
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 167
+    Top = 416
+  end
+  object Y: TTabControl
+    Align = Client
+    Size.Width = 332.000000000000000000
+    Size.Height = 616.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = PlatformDefault
+    Sizes = (
+      332s
+      567s
+      332s
+      567s
+      332s
+      567s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 110.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Settings'
+      ExplicitSize.cx = 268.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Panel1: TPanel
+        Align = Client
+        Size.Width = 332.000000000000000000
+        Size.Height = 567.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lbDevices: TListBox
+          Align = Client
+          Enabled = False
+          Size.Width = 332.000000000000000000
+          Size.Height = 454.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          OnItemClick = lbDevicesItemClick
+          Viewport.Width = 332.000000000000000000
+          Viewport.Height = 454.000000000000000000
+        end
+        object Panel4: TPanel
+          Align = Top
+          Size.Width = 332.000000000000000000
+          Size.Height = 113.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object btnStartScan: TButton
+            Position.X = 8.000000000000000000
+            Position.Y = 48.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Start Scan'
+            TextSettings.Trimming = None
+            OnClick = btnStartScanClick
+          end
+          object btConnect: TButton
+            Enabled = False
+            Position.X = 115.000000000000000000
+            Position.Y = 48.000000000000000000
+            Size.Width = 96.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'Connect'
+            TextSettings.Trimming = None
+            OnClick = btConnectClick
+          end
+          object Label5: TLabel
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 15.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 41.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Trimming = None
+            Text = 'Devices'
+            TabOrder = 3
+          end
+          object ProgressBar1: TProgressBar
+            Align = Bottom
+            Orientation = Horizontal
+            Position.Y = 103.000000000000000000
+            Size.Width = 332.000000000000000000
+            Size.Height = 10.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object ComboBox1: TComboBox
+            ItemIndex = 0
+            Position.X = 77.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 180.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            OnChange = ComboBox1Change
+          end
+          object btSaveDevice: TButton
+            Position.X = 215.000000000000000000
+            Position.Y = 47.000000000000000000
+            Size.Width = 109.000000000000000000
+            Size.Height = 41.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            Text = 'Save device'
+            TextSettings.Trimming = None
+            OnClick = btSaveDeviceClick
+          end
+          object btDelDevice: TButton
+            Position.X = 265.000000000000000000
+            Position.Y = -1.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'trashtoolbutton'
+            TabOrder = 6
+            Text = 'DelDevice'
+            TextSettings.Trimming = None
+            OnClick = btDelDeviceClick
+          end
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Enabled = False
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 110.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Manual'
+      OnClick = TabItem2Click
+      ExplicitSize.cx = 268.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar1: TToolBar
+        Align = MostTop
+        Size.Width = 332.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'ToolBar1Style1'
+        TabOrder = 1
+        object lExpTime: TLabel
+          Align = Left
+          Size.Width = 144.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
+          Text = 'Exp time'
+          TabOrder = 0
+        end
+        object lEventTime: TLabel
+          Align = Right
+          Position.X = 152.000000000000000000
+          Size.Width = 180.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
+          Text = 'Event time'
+          TabOrder = 1
+        end
+      end
+      object StatusBar1: TStatusBar
+        Align = MostBottom
+        Position.Y = 526.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 332.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'StatusBar1Style1'
+        TabOrder = 0
+        object lGeneralTime: TLabel
+          Align = Contents
+          Size.Width = 332.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
+          TabOrder = 1
+        end
+      end
+      object mProtocol: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 8.000000000000000000
+        Align = Client
+        Size.Width = 332.000000000000000000
+        Size.Height = 157.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 324.000000000000000000
+        Viewport.Height = 149.000000000000000000
+      end
+      object Panel2: TPanel
+        Align = Top
+        Position.Y = 48.000000000000000000
+        Size.Width = 332.000000000000000000
+        Size.Height = 313.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object cbGPIO4: TCheckBox
+          Position.X = 172.000000000000000000
+          Position.Y = 224.000000000000000000
+          Size.Width = 99.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'GPIO4'
+        end
+        object cbGPIO3: TCheckBox
+          Position.X = 172.000000000000000000
+          Position.Y = 190.000000000000000000
+          Size.Width = 99.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'GPIO3'
+        end
+        object cbGPIO2: TCheckBox
+          Position.X = 21.000000000000000000
+          Position.Y = 224.000000000000000000
+          Size.Width = 99.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'GPIO2'
+        end
+        object cbGPIO1: TCheckBox
+          Position.X = 21.000000000000000000
+          Position.Y = 190.000000000000000000
+          Size.Width = 99.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = 'GPIO1'
+        end
+        object Label4: TLabel
+          Position.X = 302.000000000000000000
+          Position.Y = 153.000000000000000000
+          Size.Width = 15.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = '%'
+          TabOrder = 10
+        end
+        object ePWM4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 8
+          Text = '50'
+          Position.X = 257.000000000000000000
+          Position.Y = 150.000000000000000000
+          Enabled = False
+          Size.Width = 40.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = ePWM1Change
+        end
+        object cbPWM4: TCheckBox
+          Position.X = 172.000000000000000000
+          Position.Y = 145.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = 'PWM4'
+          OnChange = cbPWM4Change
+        end
+        object Label2: TLabel
+          Position.X = 149.000000000000000000
+          Position.Y = 153.000000000000000000
+          Size.Width = 15.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = '%'
+          TabOrder = 23
+        end
+        object ePWM2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 14
+          Text = '50'
+          Position.X = 104.000000000000000000
+          Position.Y = 150.000000000000000000
+          Enabled = False
+          Size.Width = 40.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = ePWM1Change
+        end
+        object cbPWM2: TCheckBox
+          Position.X = 21.000000000000000000
+          Position.Y = 145.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          Text = 'PWM2'
+          OnChange = cbPWM2Change
+        end
+        object Label3: TLabel
+          Position.X = 302.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 15.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = '%'
+          TabOrder = 13
+        end
+        object ePWM3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 11
+          Text = '50'
+          Position.X = 257.000000000000000000
+          Position.Y = 93.000000000000000000
+          Enabled = False
+          Size.Width = 40.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = ePWM1Change
+        end
+        object cbPWM3: TCheckBox
+          Position.X = 172.000000000000000000
+          Position.Y = 88.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          Text = 'PWM3'
+          OnChange = cbPWM3Change
+        end
+        object Label1: TLabel
+          Position.X = 149.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 21.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = '%'
+          TabOrder = 24
+        end
+        object ePWM1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 22
+          Text = '50'
+          Position.X = 104.000000000000000000
+          Position.Y = 93.000000000000000000
+          Enabled = False
+          Size.Width = 40.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = ePWM1Change
+        end
+        object cbPWM1: TCheckBox
+          Position.X = 21.000000000000000000
+          Position.Y = 89.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+          Text = 'PWM1'
+          OnChange = cbPWM1Change
+        end
+        object btLight: TButton
+          Enabled = False
+          StyledSettings = [Family, Size, Style]
+          Position.X = 213.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 99.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'ON'
+          TextSettings.Trimming = None
+          OnClick = btLightClick
+        end
+        object eEventComment: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 28
+          Position.X = 22.000000000000000000
+          Position.Y = 39.000000000000000000
+          Size.Width = 183.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object eExpComment: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 29
+          Position.X = 121.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 188.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object btExp: TButton
+          StyledSettings = [Family, Size, Style]
+          Position.X = 19.000000000000000000
+          Position.Y = -1.000000000000000000
+          Size.Width = 98.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Start exp'
+          TextSettings.Trimming = None
+          OnClick = btExpClick
+        end
+        object bClean: TButton
+          Position.X = 248.000000000000000000
+          Position.Y = 270.000000000000000000
+          Size.Width = 76.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 30
+          Text = 'Clean'
+          TextSettings.Trimming = None
+          OnClick = bCleanClick
+        end
+        object bDelLast: TButton
+          Position.X = 18.000000000000000000
+          Position.Y = 270.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 31
+          Text = 'Del last'
+          TextSettings.Trimming = None
+          OnClick = bDelLastClick
+        end
+        object btShare: TButton
+          Position.X = 128.000000000000000000
+          Position.Y = 270.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 33
+          Text = 'Share'
+          TextSettings.Trimming = None
+          OnClick = btShareClick
+        end
+        object lePWM3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 21
+          TextSettings.VertAlign = Trailing
+          Position.X = 172.000000000000000000
+          Position.Y = 65.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = lePWM3Change
+        end
+        object lePWM2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 20
+          TextSettings.VertAlign = Trailing
+          Position.X = 21.000000000000000000
+          Position.Y = 120.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = lePWM2Change
+        end
+        object lePWM4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 15
+          TextSettings.VertAlign = Trailing
+          Position.X = 172.000000000000000000
+          Position.Y = 120.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = lePWM4Change
+        end
+        object leGPIO1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 19
+          TextSettings.VertAlign = Trailing
+          Position.X = 94.000000000000000000
+          Position.Y = 188.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = leGPIO1Change
+        end
+        object leGPIO3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 16
+          TextSettings.VertAlign = Trailing
+          Position.X = 254.000000000000000000
+          Position.Y = 188.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = leGPIO3Change
+        end
+        object leGPIO2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 18
+          TextSettings.VertAlign = Trailing
+          Position.X = 94.000000000000000000
+          Position.Y = 222.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = leGPIO2Change
+        end
+        object leGPIO4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 17
+          TextSettings.VertAlign = Trailing
+          Position.X = 254.000000000000000000
+          Position.Y = 222.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = leGPIO4Change
+        end
+        object lePWM1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 34
+          TextSettings.VertAlign = Trailing
+          Position.X = 21.000000000000000000
+          Position.Y = 65.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = lePWM1Change
+        end
+      end
+      object Splitter2: TSplitter
+        Align = Top
+        Cursor = crVSplit
+        MinSize = 20.000000000000000000
+        Position.Y = 361.000000000000000000
+        Size.Width = 332.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object btPWMFr: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 128.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'PWM frequency'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        Visible = False
+        OnClick = btPWMFrClick
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Enabled = False
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 112.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Automatic'
+      ExplicitSize.cx = 112.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Panel3: TPanel
+        Align = Top
+        Size.Width = 332.000000000000000000
+        Size.Height = 337.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Programm: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 14
+          Text = '/0-'
+          TextSettings.Font.Size = 11.000000000000000000
+          Position.Y = 93.000000000000000000
+          Size.Width = 332.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          OnChange = ProgrammChange
+        end
+        object ProgressBar3: TProgressBar
+          Align = Top
+          Orientation = Horizontal
+          Size.Width = 332.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'progressbarstyle'
+        end
+        object btPDelLast: TButton
+          Position.X = 8.000000000000000000
+          Position.Y = 291.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 17
+          Text = 'Del last'
+          TextSettings.Trimming = None
+          OnClick = btPDelLastClick
+        end
+        object btPClean: TButton
+          Position.X = 248.000000000000000000
+          Position.Y = 291.000000000000000000
+          Size.Width = 76.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 15
+          Text = 'Clean'
+          TextSettings.Trimming = None
+          OnClick = btPCleanClick
+        end
+        object btPShare: TButton
+          Position.X = 128.000000000000000000
+          Position.Y = 291.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 16
+          Text = 'Share'
+          TextSettings.Trimming = None
+          OnClick = btPShareClick
+        end
+        object btStartProgramm: TButton
+          StyledSettings = [Family, Size, Style]
+          Position.X = 8.000000000000000000
+          Position.Y = 221.000000000000000000
+          Size.Width = 122.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Start'
+          TextSettings.Trimming = None
+          OnClick = btStartProgrammClick
+        end
+        object eProgramExpTitle: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 33
+          TextSettings.VertAlign = Trailing
+          Position.X = 138.000000000000000000
+          Position.Y = 165.000000000000000000
+          Size.Width = 186.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object lbChannels: TListBox
+          Align = Top
+          Position.Y = 10.000000000000000000
+          Size.Width = 332.000000000000000000
+          Size.Height = 83.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxstyle'
+          TabOrder = 34
+          Columns = 4
+          DisableFocusEffect = True
+          Items.Strings = (
+            'PWM1'
+            'PWM2'
+            'PWM3'
+            'PWM4'
+            'GPIO1'
+            'GPIO2'
+            'GPIO3'
+            'GPIO4')
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          MultiSelectStyle = Default
+          ShowCheckboxes = True
+          OnChangeCheck = lbChannelsChangeCheck
+          OnItemClick = lbChannelsItemClick
+          Viewport.Width = 327.000000000000000000
+          Viewport.Height = 83.000000000000000000
+        end
+        object Label6: TLabel
+          Position.X = 8.000000000000000000
+          Position.Y = 171.000000000000000000
+          Size.Width = 138.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = 'Program Title:'
+          TabOrder = 36
+        end
+        object Label7: TLabel
+          Position.X = 7.000000000000000000
+          Position.Y = 135.000000000000000000
+          Size.Width = 122.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Trimming = None
+          Text = 'Ch comment:'
+          TabOrder = 35
+        end
+        object btIndicator: TButton
+          StyledSettings = [Family, Size, Style]
+          Position.X = 202.000000000000000000
+          Position.Y = 221.000000000000000000
+          Size.Width = 122.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Ch indicator'
+          TextSettings.Trimming = None
+          OnClick = btIndicatorClick
+        end
+        object Label8: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 8.000000000000000000
+          Position.Y = 128.000000000000000000
+          Size.Width = 339.000000000000000000
+          Size.Height = 9.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 9.000000000000000000
+          TextSettings.WordWrap = False
+          TextSettings.Trimming = None
+          Text = 
+            '/intencity(%)-duration(s)/.../0-  OR  /pulse dur.(ms)*freq.(Hz) ' +
+            '- duration /.../0-'
+          TabOrder = 37
+        end
+        object eChComment: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 32
+          TextSettings.VertAlign = Trailing
+          Position.X = 137.000000000000000000
+          Position.Y = 129.000000000000000000
+          Size.Width = 186.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = eChCommentChange
+        end
+      end
+      object Splitter3: TSplitter
+        Align = Top
+        Cursor = crVSplit
+        MinSize = 20.000000000000000000
+        Position.Y = 337.000000000000000000
+        Size.Width = 332.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object mPProtocol: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 8.000000000000000000
+        Align = Client
+        Size.Width = 332.000000000000000000
+        Size.Height = 174.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 14
+        Viewport.Width = 324.000000000000000000
+        Viewport.Height = 166.000000000000000000
+      end
+      object ToolBar2: TToolBar
+        Align = MostBottom
+        Position.Y = 519.000000000000000000
+        Size.Width = 332.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 31
+        object lPExpTime: TLabel
+          Align = Left
+          Size.Width = 164.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
+          Text = 'ExpTime'
+          TabOrder = 0
+        end
+        object lPGeneralTime: TLabel
+          Align = Right
+          Position.X = 160.000000000000000000
+          Size.Width = 172.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
+          Text = 'Current time'
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object tExp: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tExpTimer
+    Left = 232
+    Top = 416
+  end
+  object tEvent: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tEventTimer
+    Left = 288
+    Top = 416
+  end
+  object tGeneral: TTimer
+    OnTimer = tGeneralTimer
+    Left = 24
+    Top = 416
+  end
+  object BluetoothLE1: TBluetoothLE
+    Enabled = True
+    OnDisconnect = BluetoothLE1Disconnect
+    OnDiscoverLEDevice = BluetoothLE1DiscoverLEDevice
+    OnServicesDiscovered = BluetoothLE1ServicesDiscovered
+    OnEndDiscoverDevices = BluetoothLE1EndDiscoverDevices
+    Left = 96
+    Top = 416
+  end
+end
