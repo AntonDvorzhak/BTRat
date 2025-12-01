@@ -15,7 +15,7 @@ This is an Android app for manipulating the JDY16 Bluetooth chip.
 BTrat64.apk - software package for installation on 64-bit Android 13 devices, SDK 25.
 The Code folder contains the source code in Pascal.
 
-## Description 
+## Installation
 
 To install the programme, transfer the BTrat64.apk installation package to your Android device and run the unpacker/installer.
 
